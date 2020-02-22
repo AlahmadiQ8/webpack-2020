@@ -1,6 +1,27 @@
-$body-color: slateblue;
+@use "@material/theme" with (
+  $primary: #9c27b0,
+  $secondary: #76ff03,
+  $background: #fff,
+  );
+@use "@material/typography/mdc-typography";
+@use '@material/button/mdc-button';
+@use "@material/card/mdc-card";
+@use "@material/icon-button/mdc-icon-button";
 
-body {
-  color: $body-color;
-  font-family: sans-serif;
+
+
+.foo-button {
+  // @include button.container-fill-color(darksalmon);
+  // @include button.
+}
+
+// $body-color: slateblue;
+
+// body {
+//   color: $body-color;
+//   font-family: sans-serif;
+// }
+
+.my-card {
+  max-width: 400px;
 }

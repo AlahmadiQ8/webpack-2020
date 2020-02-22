@@ -33,7 +33,15 @@ module.exports = merge(common, {
         use : [
           MiniCssExtractPlugin.loader,
           'css-loader',
-          'sass-loader'
+          {
+            loader: 'sass-loader',
+            options: {
+              implementation: require('sass'),
+              sassOptions: {
+                includePaths: ['./node_modules']
+              },
+            }
+          }
         ]
       }
     ]
