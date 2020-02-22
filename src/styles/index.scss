@@ -1,14 +1,50 @@
 @use "@material/theme" with (
-  $primary: #9c27b0,
-  $secondary: #76ff03,
-  $background: #fff,
-  );
+  $primary: #0083F3,
+  $secondary: #FF766B,
+  $on-primary: #216EAF,
+  $on-secondary: #C6635C,
+);
 @use "@material/typography/mdc-typography";
 @use '@material/button/mdc-button';
 @use "@material/card/mdc-card";
 @use "@material/icon-button/mdc-icon-button";
+@use "@material/top-app-bar/mdc-top-app-bar";
+@use "@material/layout-grid/mdc-layout-grid";
 
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
 
+h1 {
+  margin-top: 0px;
+}
+
+//  *************************************************
+//  HEADER
+//  *************************************************
+.header-row {
+  height: 75px;
+  @media (max-width: $md) {
+    & {
+      height: 64px;
+    }
+  }
+}
+
+//  *************************************************
+//  HOME - JUMBORTON
+//  *************************************************
+.grid-max-width {
+  max-width: 950px;
+  margin-top: 75px;
+  @media (max-width: $md) {
+    & {
+      margin-top: 64px;
+    }
+  }
+}
 
 .foo-button {
   // @include button.container-fill-color(darksalmon);
