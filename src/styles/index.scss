@@ -6,10 +6,12 @@
 );
 @use "@material/typography/mdc-typography";
 @use '@material/button/mdc-button';
+@use '@material/button';
 @use "@material/card/mdc-card";
 @use "@material/icon-button/mdc-icon-button";
 @use "@material/top-app-bar/mdc-top-app-bar";
 @use "@material/layout-grid/mdc-layout-grid";
+@use "@material/layout-grid";
 
 $xs: 0;
 $sm: 576px;
@@ -36,20 +38,67 @@ h1 {
 //  *************************************************
 //  HOME - JUMBORTON
 //  *************************************************
-.grid-max-width {
-  max-width: 950px;
-  margin-top: 75px;
-  @media (max-width: $md) {
-    & {
-      margin-top: 64px;
-    }
+.first {
+  order: 1;
+  @media (max-width: map-get(layout-grid.$breakpoints, "desktop")) {
+    order: 2;
+    grid-column-end: span 8;
+  }
+  @media (max-width: map-get(layout-grid.$breakpoints, "tablet")) {
+    grid-column-end: span 2;
   }
 }
+.second {
+  order: 2;
+  h1 {
+    font-weight: bold;
+    color: #fff;
+  }
+  p {
+    color: theme.prop-value(text-hint-on-dark);
+  }
+  button {
+    @include button.container-fill-color(theme.prop-value(secondary));
+    @include button.ink-color(#fff);
+    @include button.density(0);
+    @include button.shape-radius(15px);
+    max-width: 200px;
+    margin-bottom: 50px;
+  }
+  @media (max-width: map-get(layout-grid.$breakpoints, "desktop")) {
+    order: 1;
+    grid-column-end: span 8;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    h1 {
+      max-width: 700px;
+    }
+  }
+  @media (max-width: map-get(layout-grid.$breakpoints, "tablet")) {
+    grid-column-end: span 2;
+  }
+}
+.grid-max-width {
+  max-width: 950px;
+}
+.no-padding-bottom {
+  padding-bottom: 0;
+}
+.bg-gradient {
+  background: theme.prop-value(primary);
+  background: radial-gradient(theme.prop-value(primary), theme.prop-value(on-primary));
+}
 
-.foo-button {
+
+
+
+
+
+// .foo-button {
   // @include button.container-fill-color(darksalmon);
   // @include button.
-}
+// }
 
 // $body-color: slateblue;
 
@@ -57,7 +106,3 @@ h1 {
 //   color: $body-color;
 //   font-family: sans-serif;
 // }
-
-.my-card {
-  max-width: 400px;
-}

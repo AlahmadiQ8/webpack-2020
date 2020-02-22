@@ -1,4 +1,5 @@
 import 'normalize.css';
+import '../styles/utilities.css';
 import '../styles/icons.css';
 import '../styles/index.scss';
 
