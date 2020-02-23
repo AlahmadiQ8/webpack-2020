@@ -49,9 +49,6 @@ h1 {
     order: 2;
     grid-column-end: span 8;
   }
-  @media (max-width: map-get(layout-grid.$breakpoints, "tablet")) {
-    grid-column-end: span 2;
-  }
 }
 .second {
   order: 2;
@@ -78,12 +75,8 @@ h1 {
     text-align: center;
     margin-top: 50px;
     h1 {
-      max-width: 700px;
       margin-top: 15px;
     }
-  }
-  @media (max-width: map-get(layout-grid.$breakpoints, "tablet")) {
-    grid-column-end: span 2;
   }
 }
 .grid-max-width {
