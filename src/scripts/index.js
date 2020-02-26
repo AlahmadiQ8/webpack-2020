@@ -8,3 +8,4 @@ import {MDCTopAppBar} from '@material/top-app-bar';
 
 const topAppBar = new MDCTopAppBar(document.querySelector('.mdc-top-app-bar'));
 const buttonRipple = new MDCRipple(document.querySelector('.mdc-button'));
+buttonRipple.unbounded = true;
