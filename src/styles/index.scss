@@ -18,6 +18,9 @@
 @use "@material/top-app-bar/mixins" as top-app-bar;
 @use "@material/layout-grid/mdc-layout-grid";
 @use "@material/layout-grid";
+@use "@material/list/mdc-list";
+// @use "@material/chips/mdc-chips";
+// @use "@material/chips/mixins" as chips;
 
 $xs: 0;
 $sm: 576px;
@@ -27,6 +30,10 @@ $xl: 1200px;
 
 h1 {
   margin-top: 0px;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 
 //  *************************************************
@@ -97,7 +104,7 @@ h1 {
     }
   }
 }
-.grid-max-width {
+.jumborton-max-width {
   max-width: 950px;
 }
 .no-padding-bottom {
@@ -108,7 +115,67 @@ h1 {
   background: radial-gradient(at 50% bottom, theme.prop-value(on-primary) 30%, theme.prop-value(primary) 59%);
 }
 
+//  *************************************************
+//  HOME - Demo Routine
+//  *************************************************
+.example-max-width {
+  max-width: 600px;
+}
 
+.routine {
+  &__title {
+    @include typography.typography(headline5);
+    color: #2E3D5A;
+    font-weight: bold;
+  }
+  &__description {
+    @include typography.typography(body1);
+    color: #697A8D;
+  }
+}
+
+.steps {
+  &__timeOfDay {
+    // @include typography.typography(headline6);
+    // @include chips.shape-radius(5px);
+    font-weight: bold;
+    .morning {
+      color: theme.prop-value(secondary);
+      .material-icons {
+        margin-right: 16px;
+        color: theme.prop-value(secondary);
+      }
+    }
+    .evening {
+      color: theme.prop-value(primary);
+      .material-icons {
+        margin-right: 16px;
+        color: theme.prop-value(primary);
+      }
+    }
+  }
+  .order {
+    color: #2E3D5A;
+    @include typography.typography(caption);
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  // &__timeOfDay__icon {
+  //   margin-right: 16px;
+  //   color: theme.prop-value(primary); 
+  // }
+  .single {
+    padding: 0 24px;
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+  .step-description {
+    @include typography.typography(body2);
+    color: #697A8D;
+  }
+}
 //  *************************************************
 //  HOME - FOOTER
 //  *************************************************
