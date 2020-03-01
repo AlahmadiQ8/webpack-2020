@@ -36,7 +36,6 @@ ul {
   padding: 0;
 }
 
-
 .display-none {
   display: none;
 }
@@ -163,16 +162,21 @@ ul {
 }
 
 .routine {
-  box-shadow: 0 0 2px 0 rgba(46,62,72,.12), 0 2px 4px 0 rgba(46,62,72,.12);
+  box-shadow: 0 0 2px 0 rgba(46, 62, 72, 0.12), 0 2px 4px 0 rgba(46, 62, 72, 0.12);
   padding: 20px;
   &__title {
     @include typography.typography(headline5);
-    color: #2E3D5A;
+    color: #2e3d5a;
     font-weight: bold;
   }
   &__description {
     @include typography.typography(body1);
-    color: #697A8D;
+    color: #697a8d;
+  }
+  .mdc-button {
+    @media (max-width: map-get(layout-grid.$breakpoints, "tablet")) {
+      font-size: 0.59rem;
+    }
   }
 }
 
@@ -197,14 +201,14 @@ ul {
     }
   }
   .order {
-    color: #2E3D5A;
+    color: #2e3d5a;
     @include typography.typography(caption);
     font-weight: bold;
     margin-bottom: 5px;
   }
   // &__timeOfDay__icon {
   //   margin-right: 16px;
-  //   color: theme.prop-value(primary); 
+  //   color: theme.prop-value(primary);
   // }
   .single {
     padding: 0 24px;
@@ -215,7 +219,7 @@ ul {
   }
   .step-description {
     @include typography.typography(body2);
-    color: #697A8D;
+    color: #697a8d;
   }
 }
 //  *************************************************
@@ -228,7 +232,8 @@ footer {
   & .mdc-button {
     @include button.ink-color(#fff);
   }
-  a, a:visited {
+  a,
+  a:visited {
     font-weight: bold;
     text-decoration: none;
     color: lighten(theme.prop-value(text-hint-on-dark), 60);
@@ -238,10 +243,9 @@ footer {
   }
 }
 
-
 // .foo-button {
-  // @include button.container-fill-color(darksalmon);
-  // @include button.
+// @include button.container-fill-color(darksalmon);
+// @include button.
 // }
 
 // $body-color: slateblue;
