@@ -36,6 +36,34 @@ ul {
   padding: 0;
 }
 
+
+.display-none {
+  display: none;
+}
+.display-incline-block {
+  display: inline-block;
+}
+@media (max-width: map-get(layout-grid.$breakpoints, "desktop")) {
+  .display-none-desktop {
+    display: none;
+  }
+  .display-incline-block-desktop {
+    display: inline-block;
+  }
+}
+@media (max-width: map-get(layout-grid.$breakpoints, "tablet")) {
+  .display-none-tablet {
+    display: none;
+  }
+  .display-incline-block-tablet {
+    display: inline-block;
+  }
+}
+
+.text-secondary {
+  color: theme.prop-value(secondary) !important;
+}
+
 //  *************************************************
 //  DEBUG
 //  *************************************************
@@ -118,6 +146,18 @@ ul {
 //  *************************************************
 //  HOME - Demo Routine
 //  *************************************************
+.example-demo-max-width {
+  max-width: 150px;
+  padding: 0;
+  @media (max-width: map-get(layout-grid.$breakpoints, "desktop")) {
+    max-width: 230px;
+  }
+}
+
+.demo-wrapper-max-width {
+  max-width: 1000px;
+}
+
 .example-max-width {
   max-width: 600px;
 }

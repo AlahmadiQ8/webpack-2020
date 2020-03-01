@@ -117,7 +117,8 @@
           <div
             class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--order-0 d-flex flex-column justify-content-center second">
             <h1 class="mdc-typography--headline3">Build a Skincare Routine and Share It With One Click</h1>
-            <p class="mdc-typography--headline6">A place to build your own personal skincare routine and share it with
+            <p class="mdc-typography--headline6">A place to build your personal print-friednly skincare routine and
+              share it with
               others with a unique link</p>
             <button class="mdc-button mdc-button--raised">
               <div class="mdc-button__ripple"></div>
@@ -129,68 +130,90 @@
       </div>
     </div>
 
-    <div class="example-routine-wrapper d-flex justify-content-center py-2 py-lg-5">
-      <div class="routine example-max-width flex-grow-1 mb-3">
-        <h2 class="routine__title px-2 px-lg-0">3-Month Acne Progress through OCM & New Shaving Routine</h2>
-        <p class="routine__description px-2 px-lg-0">
-          Hi ScA! First of all, I'm very thankful for all the wonderful people here,
-          for your brains and overall awesomeness! All the information on this sub
-          have tremendously helped me deal with my acne.
-        </p>
-        <div class="steps">
-          <div class="steps__timeOfDay mdc-list mdc-list--non-interactive">
-            <li class="mdc-list-item mdc-ripple-upgraded morning">
-              <span class="mdc-list-item__graphic material-icons" aria-hidden="true">wb_sunny</span
-                class="mdc-list-item__text">Morning
+    <div class="mdc-layout-grid d-flex justify-content-center py-2 py-lg-5">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-desktop mdc-layout-grid__cell--span-12-tablet">
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-12-tablet">
+          <p class="mdc-typography--headline6">
+            I built this site after being overwhelmed with browsing reddit for Skincare routines.
+            I wanted to create a place where people can create sharable and printable routines via permalinks
+          </p>
+
+          <div class="mdc-list mdc-list--non-interactive example-demo-max-width">
+            <li class="mdc-list-item text-secondary">
+              <span class="mdc-list-item__text">Example</span>
+              <span class="mdc-list-item__meta material-icons text-secondary display-incline-block display-none-desktop" aria-hidden="true">arrow_right_alt</span>
+              <span class="mdc-list-item__meta material-icons text-secondary display-none display-incline-block-desktop" aria-hidden="true">arrow_downward_alt</span>
             </li>
           </div>
-          <ul>
-            <li class="single">
-              <ul>
-                <li class="order">Step 1</li>
-                <li class="step-description">Clean: CeraVe Hydrating Facial Cleanser (here is a link for
-                  more options)</li>
-              </ul>
-            </li>
-            <li class="single">
-              <ul>
-                <li class="order">Step 2</li>
-                <li class="step-description">Moisturize: Cetaphil moisturizing cream</li>
-              </ul>
-            </li>
-            <li class="single">
-              <ul>
-                <li class="order">Step 3</li>
-                <li class="step-description">Sunscreen: Biore Sarasara UV Aqua Rich Watery Essence
-                  Sunscreen SPF50+</li>
-              </ul>
-            </li>
-          </ul>
         </div>
-        <div class="steps">
-          <div class="steps__timeOfDay mdc-list mdc-list--non-interactive">
-            <li class="mdc-list-item mdc-ripple-upgraded evening">
-              <span class="mdc-list-item__graphic material-icons" aria-hidden="true">nights_stay</span
-                class="mdc-list-item__text">Evening</li>
-            <ul>
-              <li class="single">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-desktop mdc-layout-grid__cell--span-12-tablet">
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-5-desktop mdc-layout-grid__cell--span-12-tablet">
+          <div class="routine flex-grow-1 mb-3">
+            <h2 class="routine__title px-2 px-lg-0">My Routine Based on Reddit's ScA Routine</h2>
+            <p class="routine__description px-2 px-lg-0">
+              Based Reddit's ScA recommendation, my routine is kept simple and budget friendly with the
+              exception of Tretinoin (RetinA), which is prescription only.
+            </p>
+            <div class="steps">
+              <div class="steps__timeOfDay mdc-list mdc-list--non-interactive">
+                <li class="mdc-list-item mdc-ripple-upgraded morning">
+                  <span class="mdc-list-item__graphic material-icons" aria-hidden="true">wb_sunny</span>
+                  <span class="mdc-list-item__text">Morning</span>
+                </li>
+              </div>
+              <ul>
+                <li class="single">
+                  <ul>
+                    <li class="order">Step 1</li>
+                    <li class="step-description">Wash face with CeraVe Hydrating Facial Cleanser</li>
+                  </ul>
+                </li>
+                <li class="single">
+                  <ul>
+                    <li class="order">Step 2</li>
+                    <li class="step-description">Moisturize with Cetaphil moisturizing cream</li>
+                  </ul>
+                </li>
+                <li class="single">
+                  <ul>
+                    <li class="order">Step 3</li>
+                    <li class="step-description">Apply sunscreen using Biore Sarasara UV Aqua Rich Watery Essence
+                      Sunscreen SPF50+</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="steps">
+              <div class="steps__timeOfDay mdc-list mdc-list--non-interactive">
+                <li class="mdc-list-item mdc-ripple-upgraded evening">
+                  <span class="mdc-list-item__graphic material-icons" aria-hidden="true">nights_stay</span>
+                  <span class="mdc-list-item__text">Evening</span></li>
                 <ul>
-                  <li class="order">Step 1</li>
-                  <li class="step-description">Clean: CeraVe Hydrating Facial Cleanser (here is a link for
-                    more options)</li>
+                  <li class="single">
+                    <ul>
+                      <li class="order">Step 1</li>
+                      <li class="step-description">Wash face with CeraVe Hydrating Facial Cleanser</li>
+                    </ul>
+                  </li>
+                  <li class="single">
+                    <ul>
+                      <li class="order">Step 2</li>
+                      <li class="step-description">Apply 0.1% Tretinoin Cream</li>
+                    </ul>
+                  </li>
                 </ul>
-              </li>
-              <li class="single">
-                <ul>
-                  <li class="order">Step 2</li>
-                  <li class="step-description">Apply 0.1% Tretinoin Cream (Prescription Only)</li>
-                </ul>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+
+
 
 
   </main>
@@ -202,7 +225,7 @@
           <a href="/" class="mdc-button">
             <span class="mdc-button__label">Home</span>
           </a>
-          <a class="mdc-button" href="mailto:m.mohammad@ucla.edu?Subject=[skinshare]" target="_top">
+          <a class="mdc-button" href="mailto:m91.alahmadi@gmail.com?Subject=[skinshare]" target="_top">
             <span class="mdc-button__label">Contact</span>
           </a>
         </div>
