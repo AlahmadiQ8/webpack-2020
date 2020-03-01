@@ -163,6 +163,8 @@ ul {
 }
 
 .routine {
+  box-shadow: 0 0 2px 0 rgba(46,62,72,.12), 0 2px 4px 0 rgba(46,62,72,.12);
+  padding: 20px;
   &__title {
     @include typography.typography(headline5);
     color: #2E3D5A;
