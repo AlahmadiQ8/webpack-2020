@@ -185,6 +185,7 @@ ul {
     // @include typography.typography(headline6);
     // @include chips.shape-radius(5px);
     font-weight: bold;
+    background-color: #f9f9f9;
     .morning {
       color: theme.prop-value(secondary);
       .material-icons {
