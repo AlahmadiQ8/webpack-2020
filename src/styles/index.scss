@@ -74,7 +74,8 @@ ul {
 //  HEADER
 //  *************************************************
 .header {
-  @include top-app-bar.fill-color(theme.prop-value(primary));
+  // @include top-app-bar.fill-color(theme.prop-value(primary));
+  @include top-app-bar.fill-color(darken(theme.prop-value(primary), 5));
   border-bottom: 1px solid lighten(theme.prop-value(primary), 10);
 }
 .header-row {
@@ -139,7 +140,7 @@ ul {
 }
 .bg-gradient {
   background: theme.prop-value(primary);
-  background: radial-gradient(at 50% bottom, theme.prop-value(on-primary) 30%, theme.prop-value(primary) 59%);
+  background: radial-gradient(at 50% bottom, theme.prop-value(on-primary) 10%, theme.prop-value(primary) 45%);
 }
 
 //  *************************************************
@@ -228,7 +229,7 @@ ul {
 //  *************************************************
 
 footer {
-  background: theme.prop-value(primary);
+  background: darken(theme.prop-value(primary), 20);
   color: theme.prop-value(text-hint-on-dark);
   & .mdc-button {
     @include button.ink-color(#fff);
