@@ -18,8 +18,11 @@ module.exports = merge(common, {
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
     new Webpack.optimize.ModuleConcatenationPlugin(),
+    new Webpack.optimize.LimitChunkCountPlugin({
+      maxChunks: 1
+    }),
     new MiniCssExtractPlugin({
-      filename: 'bundle.css'
+      filename: 'bundle.[chunkhash:8].css'
     })
   ],
   module: {
@@ -31,13 +34,13 @@ module.exports = merge(common, {
       },
       {
         test: /\.s?css/i,
-        use : [
+        use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
           {
             loader: 'postcss-loader',
             options: {
-               plugins: () => [autoprefixer()]
+              plugins: () => [autoprefixer()]
             }
           },
           {
