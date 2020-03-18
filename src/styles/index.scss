@@ -125,7 +125,7 @@ a {
   p {
     color: theme.prop-value(text-hint-on-light);
   }
-  button {
+  .create-routine {
     @include button.container-fill-color(theme.prop-value(secondary));
     // @include button.ink-color(#fff);
     @include button.density(0);
