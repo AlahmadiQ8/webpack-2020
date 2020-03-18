@@ -21,6 +21,9 @@
 @use "@material/list/mdc-list";
 // @use "@material/chips/mdc-chips";
 // @use "@material/chips/mixins" as chips;
+@use "@material/textfield/mixins" as text-field;
+@use "@material/textfield/mdc-text-field";
+@import "@material/textfield/helper-text/mdc-text-field-helper-text";
 
 $xs: 0;
 $sm: 576px;
@@ -58,6 +61,13 @@ a {
 
 .mdc-button {
   @include button.ink-color(theme.prop-value(on-primary));
+}
+
+.mdc-text-field {
+  @include text-field.label-color(lighten(theme.prop-value(on-primary), 30));
+  @include text-field.bottom-line-color(lighten(theme.prop-value(on-primary), 30));
+  @include text-field.hover-bottom-line-color(lighten(theme.prop-value(on-primary), 20));
+  @include text-field.caret-color(lighten(theme.prop-value(on-primary), 20));
 }
 
 @media (max-width: map-get(layout-grid.$breakpoints, "desktop")) {
@@ -243,6 +253,48 @@ a {
     color: #697a8d;
   }
 }
+
+//  *************************************************
+//  CREATE - WRAPPER
+//  *************************************************
+.create-wrapper {
+  @media (min-width: map-get(layout-grid.$breakpoints, "desktop")) {
+    grid-column-start: 3;
+  }
+}
+
+//  *************************************************
+//  CREATE - WRAPPER
+//  *************************************************
+.create-form {
+  .title-text-field {
+    @include text-field.ink-color(lighten(theme.prop-value(on-primary), 10));
+    input {
+      @include typography.typography(headline5);
+      font-weight: bold;
+      &::placeholder {
+        font-weight: normal;
+      }
+    }
+    // color: lighten(theme.prop-value(on-primary), 10) !important;
+  }
+  .description-textarea {
+    @include text-field.outline-color(lighten(theme.prop-value(on-primary), 30));
+    @include text-field.hover-outline-color(lighten(theme.prop-value(on-primary), 20));
+    @include text-field.focused-outline-color(theme.prop-value(primary));
+    @include text-field.caret-color(lighten(theme.prop-value(on-primary), 20));
+  }
+  .step-text-field {
+    @include text-field.fill-color(#fff);
+  }
+  .generate-routine {
+    @include button.horizontal-padding(55px);
+  }
+  .add-step {
+    @include button.density(-3);
+  }
+}
+
 //  *************************************************
 //  HOME - FOOTER
 //  *************************************************
