@@ -1,9 +1,9 @@
 // $mdc-typography-font-family: unquote("Arial, Helvetica, sans-serif");
 @use "sass:string";
 @use "@material/theme" with (
-  $primary: #0083F3,
-  $secondary: #FF766B,
-  $on-primary: #216EAF,
+  $primary: #FEDBD0,
+  $secondary: #FEEAE6,
+  $on-primary: #442C2E,
   $on-secondary: #C6635C,
 );
 @use "@material/typography" with (
@@ -36,12 +36,30 @@ ul {
   padding: 0;
 }
 
+a {
+  color: lighten(theme.prop-value(on-primary), 30);
+  text-decoration: none;
+  font-weight: bold;
+  &:hover {
+    color: lighten(theme.prop-value(on-primary), 5);
+  }
+}
+
 .display-none {
   display: none;
 }
 .display-incline-block {
   display: inline-block;
 }
+
+.bg-surface {
+  background-color: #fbf7f5;
+}
+
+.mdc-button {
+  @include button.ink-color(theme.prop-value(on-primary));
+}
+
 @media (max-width: map-get(layout-grid.$breakpoints, "desktop")) {
   .display-none-desktop {
     display: none;
@@ -101,15 +119,15 @@ ul {
   order: 2;
   h1 {
     font-weight: bold;
-    color: #fff;
+    color: theme.prop-value(on-primary);
     margin-top: 40px;
   }
   p {
-    color: theme.prop-value(text-hint-on-dark);
+    color: theme.prop-value(text-hint-on-light);
   }
   button {
     @include button.container-fill-color(theme.prop-value(secondary));
-    @include button.ink-color(#fff);
+    // @include button.ink-color(#fff);
     @include button.density(0);
     @include button.shape-radius(15px);
     max-width: 200px;
@@ -140,7 +158,7 @@ ul {
 }
 .bg-gradient {
   background: theme.prop-value(primary);
-  background: radial-gradient(at 50% bottom, theme.prop-value(on-primary) 10%, theme.prop-value(primary) 45%);
+  // background: radial-gradient(at 50% bottom, theme.prop-value(on-primary) 10%, theme.prop-value(primary) 45%);
 }
 
 //  *************************************************
@@ -168,6 +186,7 @@ ul {
   &__title {
     @include typography.typography(headline5);
     color: #2e3d5a;
+    color: lighten(theme.prop-value(on-primary), 10);
     font-weight: bold;
   }
   &__description {
@@ -188,17 +207,17 @@ ul {
     font-weight: bold;
     background-color: #f9f9f9;
     .morning {
-      color: theme.prop-value(secondary);
+      color: lighten(theme.prop-value(on-primary), 30);
       .material-icons {
         margin-right: 16px;
-        color: theme.prop-value(secondary);
+        color: lighten(theme.prop-value(on-primary), 30);
       }
     }
     .evening {
-      color: theme.prop-value(primary);
+      color: lighten(theme.prop-value(on-primary), 30);;
       .material-icons {
         margin-right: 16px;
-        color: theme.prop-value(primary);
+        color: lighten(theme.prop-value(on-primary), 30);;
       }
     }
   }
@@ -229,19 +248,10 @@ ul {
 //  *************************************************
 
 footer {
-  background: darken(theme.prop-value(primary), 20);
-  color: theme.prop-value(text-hint-on-dark);
+  background: theme.prop-value(primary);
+  color: theme.prop-value(text-hint-on-light);
   & .mdc-button {
-    @include button.ink-color(#fff);
-  }
-  a,
-  a:visited {
-    font-weight: bold;
-    text-decoration: none;
-    color: lighten(theme.prop-value(text-hint-on-dark), 60);
-    &:hover {
-      color: darken(theme.prop-value(text-hint-on-dark), 10);
-    }
+    @include button.ink-color(theme.prop-value(on-primary));
   }
 }
 
