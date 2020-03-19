@@ -182,6 +182,11 @@ a {
   }
 }
 
+.home-example {
+  color: theme.prop-value(on-primary);
+  font-size: 1.2rem;
+}
+
 .demo-wrapper-max-width {
   max-width: 1000px;
 }
