@@ -310,6 +310,12 @@ footer {
   & .mdc-button {
     @include button.ink-color(theme.prop-value(on-primary));
   }
+  .create-routine-btn {
+    @include button.container-fill-color(theme.prop-value(secondary));
+    // @include button.ink-color(#fff);
+    @include button.density(0);
+    @include button.shape-radius(15px);
+  }
 }
 
 // .foo-button {
