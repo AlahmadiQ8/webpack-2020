@@ -26,6 +26,6 @@ const ripplesSelector = '.mdc-button, .mdc-card__primary-action';
   const field = new MDCTextField(el);
 });
 
-[].map.call(document.querySelectorAll('.mdc-text-field-helper-text'), el => {
-  const field =new MDCTextFieldHelperText(el);
-});
+// [].map.call(document.querySelectorAll('.mdc-text-field-helper-text'), el => {
+//   const field =new MDCTextFieldHelperText(el);
+// });
