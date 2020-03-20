@@ -23,6 +23,7 @@
 // @use "@material/chips/mixins" as chips;
 @use "@material/textfield/mixins" as text-field;
 @use "@material/textfield/mdc-text-field";
+@use "@material/dialog/mdc-dialog";
 @import "@material/textfield/helper-text/mdc-text-field-helper-text";
 
 $xs: 0;
@@ -89,6 +90,15 @@ a {
 
 .text-secondary {
   color: theme.prop-value(secondary) !important;
+}
+
+.divider {
+  height: 0;
+  margin: 0;
+  border: none;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(0, 0, 0, 0.12);
 }
 
 //  *************************************************
@@ -250,7 +260,7 @@ a {
     padding: 0 24px;
     margin-bottom: 20px;
     &:last-child {
-      margin-bottom: 0px;
+      margin-bottom: 30px;
     }
   }
   .step-description {
@@ -260,17 +270,14 @@ a {
 }
 
 //  *************************************************
-//  CREATE - WRAPPER
+//  CREATE - VIEW  WRAPPER
 //  *************************************************
-.create-wrapper {
+.create-wrapper, .view-wrapper {
   @media (min-width: map-get(layout-grid.$breakpoints, "desktop")) {
     grid-column-start: 3;
   }
 }
 
-//  *************************************************
-//  CREATE - WRAPPER
-//  *************************************************
 .create-form {
   .title-text-field {
     @include text-field.ink-color(lighten(theme.prop-value(on-primary), 10));

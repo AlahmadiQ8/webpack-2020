@@ -29,6 +29,10 @@ module.exports = {
       template: Path.resolve(__dirname, '../src/create.html'),
       filename: 'create.html'
     }),
+    new HtmlWebpackPlugin({
+      template: Path.resolve(__dirname, '../src/view.html'),
+      filename: 'view.html'
+    }),
   ],
   resolve: {
     alias: {
